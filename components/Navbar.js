@@ -25,7 +25,10 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
           <Link href="/" className="flex items-center gap-3 hover:opacity-90 transition-all group">
             <img src="/assets/images/logo.png" alt="Logo" className="h-12 w-12 object-cover rounded-full ring-2 ring-emerald-500/50 group-hover:ring-emerald-400 transition-all" />
-            <h1 className="text-xl font-bold tracking-tight hidden sm:block">Darul Uloom Bilaliya</h1>
+            <div className="hidden sm:flex flex-col">
+              <h1 className="text-xl font-bold tracking-tight">Darul Uloom Bilaliya</h1>
+              <span className="text-sm font-urdu opacity-80">دارالعلوم بلالیہ</span>
+            </div>
           </Link>
 
           {/* Desktop Nav */}
