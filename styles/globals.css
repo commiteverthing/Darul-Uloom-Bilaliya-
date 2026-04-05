@@ -156,7 +156,71 @@ body {
   overflow-x: hidden;
 }
 
-/* RTL Font Support */
+/* RTL Font Support - language-specific fonts */
+
+/* Urdu: Noto Nastaliq Urdu (Nastaliq script) */
+[lang="ur"] body,
+[lang="ur"] p,
+[lang="ur"] span,
+[lang="ur"] div,
+[lang="ur"] li,
+[lang="ur"] label,
+[lang="ur"] td,
+[lang="ur"] th,
+[lang="ur"] a,
+[lang="ur"] button {
+  font-family: 'Noto Nastaliq Urdu', 'Nabi', system-ui, sans-serif !important;
+}
+
+[lang="ur"] h1,
+[lang="ur"] h2,
+[lang="ur"] h3,
+[lang="ur"] h4,
+[lang="ur"] h5,
+[lang="ur"] h6 {
+  font-family: 'Noto Nastaliq Urdu', 'Nabi', var(--font-heading), system-ui, sans-serif !important;
+}
+
+/* Arabic & Farsi: Nabi font (Arabic script) */
+[lang="ar"] body,
+[lang="ar"] p,
+[lang="ar"] span,
+[lang="ar"] div,
+[lang="ar"] li,
+[lang="ar"] label,
+[lang="ar"] td,
+[lang="ar"] th,
+[lang="ar"] a,
+[lang="ar"] button,
+[lang="fa"] body,
+[lang="fa"] p,
+[lang="fa"] span,
+[lang="fa"] div,
+[lang="fa"] li,
+[lang="fa"] label,
+[lang="fa"] td,
+[lang="fa"] th,
+[lang="fa"] a,
+[lang="fa"] button {
+  font-family: 'Nabi', 'Noto Nastaliq Urdu', system-ui, sans-serif !important;
+}
+
+[lang="ar"] h1,
+[lang="ar"] h2,
+[lang="ar"] h3,
+[lang="ar"] h4,
+[lang="ar"] h5,
+[lang="ar"] h6,
+[lang="fa"] h1,
+[lang="fa"] h2,
+[lang="fa"] h3,
+[lang="fa"] h4,
+[lang="fa"] h5,
+[lang="fa"] h6 {
+  font-family: 'Nabi', 'Noto Nastaliq Urdu', var(--font-heading), system-ui, sans-serif !important;
+}
+
+/* Generic RTL fallback for any other RTL language */
 [dir="rtl"] body {
   font-family: 'Noto Nastaliq Urdu', 'Nabi', system-ui, sans-serif;
 }
