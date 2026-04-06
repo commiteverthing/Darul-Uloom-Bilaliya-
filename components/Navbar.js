@@ -113,7 +113,7 @@ export default function Navbar() {
             </button>
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="p-2 rounded-lg hover:bg-white/10 transition-all"
+              className="lg:hidden p-2 rounded-lg hover:bg-white/10 transition-all"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 {mobileOpen ? (
