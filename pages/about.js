@@ -14,6 +14,7 @@ export default function About() {
         </div>
         <div className={`relative text-center py-16 px-4 ${isRtl ? 'font-urdu' : ''}`}>
           <h2 className="text-4xl font-arabic text-emerald-300/90 mb-4">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</h2>
+          <h3 className="text-xl text-emerald-200/80 mb-2">Welcome to Darul Uloom Bilaliya</h3>
           <h1 className="text-3xl md:text-4xl font-bold mt-2">{t('about.title')}</h1>
           <p className="text-gray-300 mt-4 text-lg max-w-2xl mx-auto">{t('about.tagline')}</p>
         </div>
