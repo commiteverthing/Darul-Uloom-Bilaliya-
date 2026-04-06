@@ -14,7 +14,8 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80"></div>
         <div className="relative min-h-screen flex flex-col items-center justify-center px-6 text-center">
           <div className="opacity-0 animate-fade-in-up">
-            <h2 className="text-3xl md:text-4xl text-emerald-300/90 mb-6 font-arabic">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</h2>
+            <h2 className="text-3xl md:text-4xl text-emerald-300/90 mb-4 font-arabic">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</h2>
+            <h3 className="text-lg md:text-xl text-emerald-200/80 mb-6">Welcome to Darul Uloom Bilaliya</h3>
           </div>
           <div className="opacity-0 animate-fade-in-up stagger-1">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 tracking-tight">
