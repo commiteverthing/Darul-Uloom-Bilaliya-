@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { useLang } from '../contexts/LanguageContext';
 
 export default function Home() {
-  const { t } = useLang();
+  const { t, isRtl } = useLang();
 
   return (
     <div className="page-enter overflow-hidden">
@@ -12,35 +12,63 @@ export default function Home() {
         style={{ backgroundImage: 'url(/assets/images/hero.jpg)' }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80"></div>
+        {/* Geometric Pattern Overlay */}
+        <div className="absolute inset-0 opacity-[0.03]"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          }}>
+        </div>
         <div className="relative min-h-screen flex flex-col items-center justify-center px-6 text-center">
+          {/* Bismillah */}
           <div className="opacity-0 animate-fade-in-up">
-            <h2 className="text-3xl md:text-4xl text-emerald-300/90 mb-4 font-arabic">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</h2>
-            <h3 className="text-lg md:text-xl text-emerald-200/80 mb-6">Welcome to Darul Uloom Bilaliya</h3>
+            <div className="flex items-center gap-4 mb-4">
+              <span className="h-px w-10 bg-emerald-400/40"></span>
+              <h2 className="text-3xl md:text-4xl text-emerald-300/90 font-arabic">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</h2>
+              <span className="h-px w-10 bg-emerald-400/40"></span>
+            </div>
           </div>
+          {/* Welcome */}
           <div className="opacity-0 animate-fade-in-up stagger-1">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 tracking-tight">
+            <p className="text-emerald-200/60 text-sm md:text-base tracking-[0.25em] uppercase mb-2">Welcome to</p>
+          </div>
+          {/* Institution Name */}
+          <div className="opacity-0 animate-fade-in-up stagger-2">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white tracking-tighter">
               Darul Uloom Bilaliya
             </h1>
+            {isRtl && (
+              <p className="text-emerald-200/70 text-lg md:text-xl font-urdu mt-3">
+                دار العلوم بلالية
+              </p>
+            )}
           </div>
-          <div className="opacity-0 animate-fade-in-up stagger-2">
-            <p className="text-white/70 text-xl mb-8 max-w-2xl mx-auto leading-relaxed font-urdu">
+          {/* Description */}
+          <div className="opacity-0 animate-fade-in-up stagger-3 mt-4">
+            <p className="text-white/60 text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed font-urdu">
               {t('home.hero.description')}
             </p>
           </div>
-          <div className="flex flex-col sm:flex-row gap-4 opacity-0 animate-fade-in-up stagger-3">
+          {/* CTAs — refined visual hierarchy */}
+          <div className="flex flex-col sm:flex-row gap-4 opacity-0 animate-fade-in-up stagger-4">
             <Link
               href="/about"
-              className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-3 rounded-xl font-semibold transition-all shadow-lg shadow-emerald-500/30 hover:shadow-emerald-500/40"
+              className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-3.5 rounded-xl font-semibold transition-all shadow-lg shadow-emerald-500/30 hover:shadow-emerald-500/40"
             >
               {t('home.learn_more')}
             </Link>
             <Link
               href="/donate"
-              className="bg-white/10 hover:bg-white/20 text-white px-8 py-3 rounded-xl font-semibold transition-all backdrop-blur-sm border border-white/20"
+              className="bg-white/10 hover:bg-white/15 text-white/90 px-8 py-3.5 rounded-xl font-semibold transition-all backdrop-blur-sm border border-white/25"
             >
               {t('home.donate_now')}
             </Link>
           </div>
+        </div>
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+          <svg className="w-6 h-6 text-white/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          </svg>
         </div>
       </div>
 
